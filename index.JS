@@ -21,10 +21,6 @@ rendomImage();
 
 function rendomImage() {
   const randomIndex = Math.floor(Math.random() * srcArray.length);
-  if (randomIndex !== Number(localStorage.getItem("index"))) {
-    imgEl.src = srcArray[randomIndex];
-    localStorage.setItem("index", randomIndex);
-  } else {
-    randomIndex();
-  }
+  imgEl.src = srcArray[randomIndex];
+  localStorage.setItem("index", randomIndex);
 }
